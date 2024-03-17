@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Universe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #020012;
+            font-family: 'Unbounded', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            position: relative; /* Added for relative positioning */
+        }
+        #animation-container {
+            position: relative;
+            width: 125vw;
+            height: 225vh;
+            overflow: hidden;
+        }
+        video {
+          
+            position: absolute;
+            top: 44%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 150%;
+            min-height: 100%;
+            width: 160%;
+            height: 120%;
+        }
+         /* Adjust the positioning for the second video */
+        video:nth-child(2) {    
+            position: relative;
+            top: 20%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Set a lower z-index to place it behind the text */}
+        .text-gradient {
+            background: linear-gradient(-180deg, #e0beff 20%, #ffffff 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            position: overlay;
+        }
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #f1cafb;
+        }
+        .name {
+            position: absolute;
+            top: 20px;
+            left: 90px; /* Adjusted positioning */
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #ffffff;
+            border-radius: 9999px; /* Rounded border */
+            color: #020012;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e0beff;
+        }
+    </style>
+</head>
+<body>
+    <div id="animation-container">
+        <video autoplay loop muted playsinline src="blackhole.webm" type="video/webm"></video>
+    </div>
+    <img src="profilepicabhi.jpeg" alt="Profile Picture" class="profile-pic">
+    <div class="name">Abhinav Machavolu</div>
+    <div class="absolute top-1/4 text-white text-center"> <!-- Adjusted positioning -->
+        <h1 class="text-6xl font-bold mb-4 text-gradient"> Mastering the</h1>
+        <h1 class="text-6xl font-bold mb-4 text-gradient">   Force of Data</h1>
+        <h2 class="text-1xl font-semibold mb-4 text-gradient">Aimed to decode through the Galaxies of Insights</h2>
+        <div class="space-x-4">
+            <a href="https://married-mandolin-e21.notion.site/Abhinav-Machavolu-s-Personal-Databank-6dd9538f571c4dd28eb215c69b0afdd0?pvs=4" class="btn btn-primary rounded-full px-4 py-2">Open Personal Databank </a>
+            <a href="https://www.linkedin.com/in/abhinavmachavolu/" class="btn btn-primary rounded-full px-4 py-2">Visit LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
