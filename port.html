@@ -26,6 +26,16 @@
             height: 225vh;
             overflow: hidden;
         }
+        /* Apply styles for large screens or wider, adjust the breakpoint as needed */
+@media (min-width: 768px) {
+  .lg video {
+    width: 100vw;  /* Video width takes full viewport width */
+    height: auto;  /* Height adjusts automatically to maintain aspect ratio */
+
+    /* Ensure video fills container without stretching */
+    object-fit: cover;
+  }
+}
         video {
           
             position: absolute;
